@@ -49,7 +49,7 @@ const [isAreaChart , setIsAreaChart] = useState(false);
 
       <div className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 hover:translate-x-1.5"
       onClick={()=>{
-        navigate("/components/charts/areacharts")
+        navigate("/components/charts/MidnightPurple")
       }}>
         MidnightPurple
       </div>

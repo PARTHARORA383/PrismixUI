@@ -14,7 +14,6 @@ export default function BarChartLightComponent({width , height} : props){
   { label: "Apr", value: 60 },
   { label: "May", value: 40 },
   { label: "June", value: 50 },
-
 ];
 
 

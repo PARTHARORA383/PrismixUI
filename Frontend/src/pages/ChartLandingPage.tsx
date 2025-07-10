@@ -3,12 +3,15 @@ import BarChartLightComponent from '../components/Light/BarChart'
 import DarkChartRenderComponent from '../components/Shared/DarkChartRenderComponent'
 import MidnigntPurpleAreaChartComponent from '../components/Dark/MidnightPurpleChartComponent'
 import { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 
 export default function ChartLandingPage() {
 
 const [theme, setTheme] = useState("dark"); // "light" or "dark"
 const [chartType, setChartType] = useState("area"); // "area", "bar", "pie"
+
+const navigate = useNavigate()
+
 
 const handleThemeChange = (selectedTheme:string) => {
   setTheme(selectedTheme);
@@ -102,18 +105,24 @@ const handleChartTypeChange = (selectedChart:string) => {
 
       {
         theme == "dark" && chartType == 'area' && (<>
-             <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl'>
-        <DarkChartRenderComponent category='Area Chart' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='monotone'/>}/>
+             <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl' onClick={()=>{
+              navigate('/components/charts/MidnightPurple/1')
+             }}>
+        <DarkChartRenderComponent category='Area Chart - Monotone' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='monotone'/>} />
 
 
       </div>
 
-      <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl'>
-   <DarkChartRenderComponent category='Area Chart' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='linear'/>}/>
+      <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl'  onClick={()=>{
+              navigate('/components/charts/MidnightPurple/2')
+             }}>
+   <DarkChartRenderComponent category='Area Chart - Linear' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='linear'/>}/>
       </div>
 
-      <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl'>
-   <DarkChartRenderComponent category='Area Chart' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='step'/>}/>
+      <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl'  onClick={()=>{
+              navigate('/components/charts/MidnightPurple/3')
+             }}>
+   <DarkChartRenderComponent category='Area Chart - Step' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='step'/>} />
       </div>
         </>
         )
