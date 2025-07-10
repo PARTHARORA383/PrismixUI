@@ -7,7 +7,7 @@ height : number ,
 areatype : CurveType 
 }
 
-export default function MidnigntPurpleAreaChartComponent({width = "100%" , height , areatype} :props) {
+export default function MidnigntPurpleAreaChartComponent({  height , areatype} :props) {
 
 const data = [
   { label: "Jan", value: 20 },
@@ -62,7 +62,7 @@ const data = [
             <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
           </linearGradient>
         </defs>
-        
+
         <Area type={areatype} dataKey="value" stroke="#8884d8" fill="url(#colorUv)" />
 
 

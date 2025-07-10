@@ -7,7 +7,7 @@ interface props {
   height?: number,
   areatype?: CurveType
 }
-export default function OrangeAreaChartStep({ width, height, areatype }: props) {
+export default function OrangeAreaChartStep({ height, areatype }: props) {
 
 
 

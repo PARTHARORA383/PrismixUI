@@ -8,7 +8,7 @@ interface props {
   height?: number,
   areatype?: CurveType
 }
-export default function OrangeAreaChartSolid({ width, height, areatype }: props) {
+export default function OrangeAreaChartSolid({  height, areatype }: props) {
 
 
 

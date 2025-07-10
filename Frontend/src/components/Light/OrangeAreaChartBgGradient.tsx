@@ -7,7 +7,7 @@ interface props {
   height?: number,
   areatype?: CurveType
 }
-export default function OrangeAreaChartBgGradient({  width  ,height, areatype }: props) {
+export default function OrangeAreaChartBgGradient({  height, areatype }: props) {
 
 
 
