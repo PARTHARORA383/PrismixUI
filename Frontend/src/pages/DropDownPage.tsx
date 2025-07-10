@@ -5,13 +5,7 @@ import InstallationComponent from "../components/Shared/InstallationComponent";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 //@ts-ignore
 import {
-  solarizedlight,
   tomorrow,
-  prism,
-  atomDark,
-  darcula,
-  materialDark,
-  oneLight,
 
 } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { CopyToClipboard } from "../components/Shared/CopyToClipboard";

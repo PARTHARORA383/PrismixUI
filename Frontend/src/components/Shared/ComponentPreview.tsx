@@ -3,13 +3,11 @@ import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 //@ts-ignore
 import {
-  solarizedlight,
+  //solarizedlight,
   tomorrow,
-  prism,
-  atomDark,
-  darcula,
-  materialDark,
-  oneLight,
+
+ // materialDark,
+  //oneLight,
 
 } from 'react-syntax-highlighter/dist/esm/styles/prism';
 

@@ -1,4 +1,4 @@
-import { BarChart , XAxis , YAxis , Tooltip , CartesianGrid , Legend, Bar, ResponsiveContainer } from "recharts"
+import { BarChart , XAxis , YAxis ,   CartesianGrid , Bar, ResponsiveContainer } from "recharts"
 
 interface props{
 width : number  ,

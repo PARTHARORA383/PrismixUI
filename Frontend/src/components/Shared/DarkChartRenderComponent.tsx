@@ -1,5 +1,3 @@
-import { CopyToClipboard } from "./CopyToClipboard"
-
 
 interface Props {
 
