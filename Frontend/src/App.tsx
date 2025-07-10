@@ -4,6 +4,7 @@ import Sidebar from "./components/Shared/Sidebar"
 import TopBar from "./components/Shared/TopBar"
 import MidnightPurpleChartPage from './pages/Charts/AreaChart/MidnightPurpleChartPage'
 import ChartLandingPage from "./pages/ChartLandingPage"
+import LandingPage from "./pages/LandingPage"
 
 
 function LayoutSidebar({children}:any){
@@ -25,11 +26,13 @@ function App() {
     <BrowserRouter>
       <TopBar/>
       <Routes>
-
+        <Route path="/" element = {<LandingPage/>}/>
         <Route path="/components/dropdown" element = {<LayoutSidebar>
           <DropDownPage/></LayoutSidebar>}/>
+
         <Route path="/components/charts/areacharts" element = {<LayoutSidebar>
           <MidnightPurpleChartPage/></LayoutSidebar>}/>
+
           <Route path="/charts" element = {<ChartLandingPage/>}/>
       </Routes>
     
