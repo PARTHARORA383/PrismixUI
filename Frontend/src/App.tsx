@@ -1,0 +1,42 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import DropDownPage from "./pages/DropDownPage"
+import Sidebar from "./components/Shared/Sidebar"
+import TopBar from "./components/Shared/TopBar"
+import MidnightPurpleChartPage from './pages/Charts/AreaChart/MidnightPurpleChartPage'
+import ChartLandingPage from "./pages/ChartLandingPage"
+
+
+function LayoutSidebar({children}:any){
+  return (
+    <div className="flex">
+
+      <Sidebar/>
+      <div className="pl-96 pt-24 flex-1">{children}</div>
+    </div>
+  )
+
+}
+
+
+function App() {
+  
+  return (
+    <>
+    <BrowserRouter>
+      <TopBar/>
+      <Routes>
+
+        <Route path="/components/dropdown" element = {<LayoutSidebar>
+          <DropDownPage/></LayoutSidebar>}/>
+        <Route path="/components/charts/areacharts" element = {<LayoutSidebar>
+          <MidnightPurpleChartPage/></LayoutSidebar>}/>
+          <Route path="/charts" element = {<ChartLandingPage/>}/>
+      </Routes>
+    
+    </BrowserRouter>
+ 
+    </>
+  )
+}
+
+export default App
