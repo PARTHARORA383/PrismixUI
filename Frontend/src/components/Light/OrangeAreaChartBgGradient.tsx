@@ -7,7 +7,7 @@ interface props {
   height?: number,
   areatype?: CurveType
 }
-export default function OrangeAreaChartBgGradient({ width, height, areatype }: props) {
+export default function OrangeAreaChartBgGradient({  width  ,height, areatype }: props) {
 
 
 
@@ -93,7 +93,7 @@ export default function OrangeAreaChartBgGradient({ width, height, areatype }: p
 
           <div className="grid grid-cols-3 w-full mb-5 mt-5 ml-4 mr-4 border-t-2 border-neutral-300">{
             data.slice(-1).map((item, index) => (
-              <div className="flex flex-col justify-center items-start  rounded-lg ">
+              <div className="flex flex-col justify-center items-start  rounded-lg " key={index}>
                 <div className="text-neutral-900 font-semibold mt-2"> Sales Last Month</div>
                 <div className="text-neutral-950">Products: {item.value}</div>
               </div>

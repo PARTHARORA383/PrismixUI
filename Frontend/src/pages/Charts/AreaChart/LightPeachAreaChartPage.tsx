@@ -3,7 +3,7 @@ import ComponentPreview from "../../../components/Shared/ComponentPreview";
 import codes from "../../../components/Dark/codes";
 import InstallationComponent from "../../../components/Shared/InstallationComponent";
 import UsageComponent from "../../../components/Shared/UsageComponent";
-import MidnigntPurpleAreaChartComponent from "../../../components/Dark/MidnightPurpleChartComponent";
+
 
 import { useParams } from "react-router-dom";
 
