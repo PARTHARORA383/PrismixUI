@@ -2,12 +2,12 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import type { CurveType } from 'recharts/types/shape/Curve';
 
 interface props {
-width : number,
+width?: number | string;
 height : number ,
 areatype : CurveType 
 }
 
-export default function MidnigntPurpleAreaChartComponent({width , height , areatype} :props) {
+export default function MidnigntPurpleAreaChartComponent({width = "100%" , height , areatype} :props) {
 
 const data = [
   { label: "Jan", value: 20 },
@@ -27,10 +27,10 @@ const data = [
 
 
   return <div>
+      <div className='max-w-full'>
 
-    <ResponsiveContainer width={width} height={height}>
-      <AreaChart width={width}
-        height={height}
+    <ResponsiveContainer  width={"100%"} height={height}>
+      <AreaChart 
         data={data}
         margin={{
           top: 10,
@@ -38,8 +38,8 @@ const data = [
           left: 0,
           bottom: 0,
         }}
-
-      >
+        
+        >
         <CartesianGrid strokeDasharray="0" stroke="#333" vertical={false} strokeOpacity={0.5} horizontalPoints={[100, 200, 300]} />
         <XAxis dataKey= {"label"} />
         <YAxis />
@@ -54,7 +54,7 @@ const data = [
           isAnimationActive={true}
           animationDuration={200}
           animationEasing="ease-in-out"
-        />
+          />
 
         <defs>
           <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -62,6 +62,7 @@ const data = [
             <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
           </linearGradient>
         </defs>
+        
         <Area type={areatype} dataKey="value" stroke="#8884d8" fill="url(#colorUv)" />
 
 
@@ -70,5 +71,6 @@ const data = [
 
     </ResponsiveContainer>
 
+          </div>
   </div>
 }

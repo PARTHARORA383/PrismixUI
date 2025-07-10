@@ -6,6 +6,7 @@ import MidnightPurpleChartPage from './pages/Charts/AreaChart/MidnightPurpleChar
 import ChartLandingPage from "./pages/ChartLandingPage"
 import LandingPage from "./pages/LandingPage"
 import ScrollToTop from "./components/Shared/ScrollToTop"
+import OrangeChartLightPage from "./pages/Charts/AreaChart/OrangeChartLightPage"
 
 
 function LayoutSidebar({children}:any){
@@ -34,6 +35,8 @@ function App() {
 
         <Route path="/components/charts/MidnightPurple/:chartId?" element = {<LayoutSidebar>
           <MidnightPurpleChartPage/></LayoutSidebar>}/>
+        <Route path="/components/charts/LightOrange/:chartId?" element = {<LayoutSidebar>
+          <OrangeChartLightPage/></LayoutSidebar>}/>
 
           <Route path="/charts" element = {<ChartLandingPage/>}/>
       </Routes>

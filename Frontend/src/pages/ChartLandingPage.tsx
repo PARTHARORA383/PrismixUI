@@ -2,40 +2,44 @@ import { motion } from 'motion/react'
 import BarChartLightComponent from '../components/Light/BarChart'
 import DarkChartRenderComponent from '../components/Shared/DarkChartRenderComponent'
 import MidnigntPurpleAreaChartComponent from '../components/Dark/MidnightPurpleChartComponent'
+import OrangeAreaChartBgGradient from '../components/Light/OrangeAreaChartBgGradient'
+
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import OrangeAreaChartSolid from '../components/Light/OrangeAreaChartSolid'
+import OrangeAreaChartStep from '../components/Light/OrangeAreaChartStep'
 
 export default function ChartLandingPage() {
 
-const [theme, setTheme] = useState("dark"); // "light" or "dark"
-const [chartType, setChartType] = useState("area"); // "area", "bar", "pie"
+  const [theme, setTheme] = useState("dark"); // "light" or "dark"
+  const [chartType, setChartType] = useState("area"); // "area", "bar", "pie"
 
-const navigate = useNavigate()
+  const navigate = useNavigate()
 
 
-const handleThemeChange = (selectedTheme:string) => {
-  setTheme(selectedTheme);
-};
+  const handleThemeChange = (selectedTheme: string) => {
+    setTheme(selectedTheme);
+  };
 
-const handleChartTypeChange = (selectedChart:string) => {
-  setChartType(selectedChart);
-};
+  const handleChartTypeChange = (selectedChart: string) => {
+    setChartType(selectedChart);
+  };
 
   return <div>
 
-    <div className="flex items-center justify-start  gap-8 ">
+    <div className=" flex items-center justify-start  gap-8 ">
 
-      <div className="flex flex-col  gap-3 ml-8 w-full  ">
-        <div className="text-5xl font-medium leading-tight font-serif">
+      <div className="flex flex-col  gap-3 ml-8 mt-24 mr-4 lg:mr-0 lg:mt-0 w-full  ">
+        <div className=" text-4xl lg:text-5xl font-medium leading-tight font-serif">
           <span> Build beautiful and elegant  </span>
           <span className=""><br />charts effortlessly without <br />  any <span className='text-amber-500'>design hassle</span></span></div>
-        <div className="text-2xl text-neutral-400 mt-4 ">
+        <div className="text-lg text-neutral-400 lg:mt-4 ">
           Skip the design hassle with ready-to-use <span className='text-neutral-100'> Recharts </span> <br />charts to create beautiful and responsive charts
         </div>
 
         <div className='flex items-center justify-start gap-4'>
-          <button className='px-6 py-2 border-2 border-neutral-700 mt-4 rounded-md hover:border-neutral-500 hover:bg-neutral-900 transition-all duration-200 cursor-pointer'>Browse charts</button>
-          <div className='rounded-md px-6 py-2 border-2 border-neutral-900 bg-neutral-900 mt-4'>
+          <button className='px-6 py-1.5 lg:py-2 border-2 border-neutral-700 mt-4 rounded-md hover:border-neutral-500 hover:bg-neutral-900 transition-all duration-200 cursor-pointer'>Browse charts</button>
+          <div className='rounded-md px-6 py-1.5 lg:py-2 border-2 border-neutral-900 bg-neutral-900 mt-4'>
             npx install & plot magic </div>
         </div>
 
@@ -75,55 +79,64 @@ const handleChartTypeChange = (selectedChart:string) => {
         <motion.div
           className=" col-span-2  h-80 rounded-xl shadow-lg flex items-center justify-center bg-neutral-900 overflow-hidden  "
         >
-          <div className=''>
+          <div className='w-full'>
             <h1 className='text-center text-lg text-neutral-400 pt-4'>Area Chart</h1>
-            <MidnigntPurpleAreaChartComponent width={700} height={250} areatype="step" />
+            <MidnigntPurpleAreaChartComponent height={250} areatype="step" />
           </div>
         </motion.div>
       </div>
     </div>
 
-{
-  //Charts
-}
+    {
+      //Charts
+    }
     <div className='w-full flex items-center justify-start h-10 bg-neutral-900 mt-8 pl-8 gap-5 '>
-      <div className='text-lg text-neutral-100 cursor-default transition-colors duration-200 hover:text-neutral-400' onClick={() => handleThemeChange("dark")}>Dark Theme</div>
-      <div className='text-lg text-neutral-100 cursor-default transition-colors duration-200 hover:text-neutral-400' onClick={() => handleThemeChange("light")}>Light Theme</div>
+      <div className={`lg:text-lg   cursor-default transition-all duration-300 hover:text-neutral-100 active:text-neutral-400 ${theme == "dark" ? "text-neutral-100" : "text-neutral-400"}`} onClick={() => handleThemeChange("dark")}>Dark Theme</div>
+      <div className={`lg:text-lg   cursor-default transition-all duration-300 hover:text-neutral-100 active:text-neutral-400 ${theme == "light" ? "text-neutral-100" : "text-neutral-400"}`} onClick={() => handleThemeChange("light")}>Light Theme</div>
     </div>
 
     <div className='flex  items-center pl-9 mt-4  gap-6'>
 
-      <div className='text-lg text-neutral-400 cursor-pointer transition-colors duration-200 hover:text-neutral-100' onClick={()=>{handleChartTypeChange('area')}}
+      <div className={`lg:text-lg   cursor-default transition-all duration-300 hover:text-neutral-100 active:text-neutral-400 ${chartType == "area" ? "text-neutral-100" : "text-neutral-400"}`}onClick={() => { handleChartTypeChange('area') }}
       >Area Charts</div>
-      <div className='text-lg text-neutral-400 cursor-pointer transition-colors duration-200 hover:text-neutral-100' onClick={()=>{handleChartTypeChange('bar')}}>Bar Charts</div>
-      <div className='text-lg text-neutral-400 cursor-pointer transition-colors duration-200 hover:text-neutral-100'onClick={()=>{handleChartTypeChange('pie')}}>Pie Charts</div>
+      <div className={`lg:text-lg   cursor-default transition-all duration-300 hover:text-neutral-100 active:text-neutral-400 ${chartType == "bar" ? "text-neutral-100" : "text-neutral-400"}`} onClick={() => { handleChartTypeChange('bar') }}>Bar Charts</div>
+      <div className={`lg:text-lg   cursor-default transition-all duration-300 hover:text-neutral-100 active:text-neutral-400 ${chartType == "pie" ? "text-neutral-100" : "text-neutral-400"}`} onClick={() => { handleChartTypeChange('pie') }}>Pie Charts</div>
 
     </div>
 
-    <div className='w-full grid grid-cols-3 gap-8 pl-8 mt-8 mb-8 pr-8'>
+    <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-8 lg:pl-8 pl-4 mt-8 mb-8 pr-4 lg:pr-8'>
 
 
       {
         theme == "dark" && chartType == 'area' && (<>
-             <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl' onClick={()=>{
-              navigate('/components/charts/MidnightPurple/1')
-             }}>
-        <DarkChartRenderComponent category='Area Chart - Monotone' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='monotone'/>} />
+          <div className=' relative col-span-1 border-2 border-neutral-800  transition-colors duration-200 cursor-default h-96 rounded-xl '
+           >
+                <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/MidnightPurple/1')
+              }}> view code</button>
+            <DarkChartRenderComponent category='Area Chart - Monotone' title='Monthly Subscriptions Sold ' Component={<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='monotone' />} />
 
 
-      </div>
+          </div>
 
-      <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl'  onClick={()=>{
-              navigate('/components/charts/MidnightPurple/2')
-             }}>
-   <DarkChartRenderComponent category='Area Chart - Linear' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='linear'/>}/>
-      </div>
+          <div className='relative col-span-1 border-2 border-neutral-800 transition-colors duration-200 cursor-default h-96 rounded-xl '>
+            
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/MidnightPurple/2')
+              }}> view code</button>
 
-      <div className='col-span-1 border-2 border-neutral-800 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 rounded-xl'  onClick={()=>{
-              navigate('/components/charts/MidnightPurple/3')
-             }}>
-   <DarkChartRenderComponent category='Area Chart - Step' title='Monthly Subscriptions Sold ' Component = {<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='step'/>} />
-      </div>
+            <DarkChartRenderComponent category='Area Chart - Linear' title='Monthly Subscriptions Sold ' Component={<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='linear' />} />
+          </div>
+
+          <div className='relative col-span-1 border-2 border-neutral-800  transition-colors duration-200 cursor-default h-96 rounded-xl'>
+                <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/MidnightPurple/3')
+              }}> view code</button>
+            <DarkChartRenderComponent category='Area Chart - Step' title='Monthly Subscriptions Sold ' Component={<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='step' />} />
+          </div>
         </>
         )
       }
@@ -139,8 +152,44 @@ const handleChartTypeChange = (selectedChart:string) => {
 
 
       {theme == "light" && chartType == 'area' && (
-        <></>
+        <>
+
+          <div className='relative col-span-1 border-2 border-neutral-200 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 bg-neutral-100 rounded-xl overflow-hidden'
+          >
+
+
+
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-800 py-1 hover:bg-neutral-700 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/LightOrange/1')
+              }}> view code</button>
+            <OrangeAreaChartSolid height={250} areatype="basis" />
+
+          </div>
+
+          <div className='relative col-span-1 border-2 border-neutral-200 hover:border-neutral-400 transition-colors duration-200 cursor-default h-96 bg-neutral-100 rounded-xl overflow-hidden'
+          >
+
+            <button className='z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-800 py-1 hover:bg-neutral-700 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/LightOrange/2')
+              }}> view code</button>
+            <OrangeAreaChartBgGradient height={250} areatype="monotone" />
+          </div>
+
+
+          <div className=' relative col-span-1 border-2 border-neutral-200 transition-colors duration-200 cursor-default h-96 bg-neutral-100 rounded-xl overflow-hidden'>
+
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-800 py-1 hover:bg-neutral-700 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/LightOrange/3')
+              }}> view code</button>
+            <OrangeAreaChartStep height={250} areatype="step" />
+
+          </div>
+        </>
       )}
+
       {theme == "light" && chartType == 'bar' && (
         <></>
       )}
@@ -150,7 +199,7 @@ const handleChartTypeChange = (selectedChart:string) => {
 
 
 
-  
+
 
     </div>
 

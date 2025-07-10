@@ -10,7 +10,10 @@ const navigate = useNavigate()
 
         <div className="flex items-center justify-start w-full h-full pl-8 gap-8">
 
-      <div className="text-2xl cursor-pointer">
+      <div className="text-2xl cursor-pointer" onClick={()=>{
+
+        navigate('/')
+      }}>
       Prismix UI
       </div>
 

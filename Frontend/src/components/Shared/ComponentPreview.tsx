@@ -17,12 +17,15 @@ import { CopyToClipboard } from './CopyToClipboard';
 
 interface prop {
   title: string,
+  titlecolor ? : string 
+  backgroundcolor ?: string
   Component: React.ElementType,
   code: string ,
+  subheadingcolor ? : string,
   subheading ? : string ,
   widthclass ? : string
 }
-export default function ComponentPreview({ title, Component, code , widthclass , subheading}: prop) {
+export default function ComponentPreview({ title, titlecolor , backgroundcolor ,Component, code , widthclass , subheading  , subheadingcolor}: prop) {
 
   const [isPreview, setIsPreview] = useState<true | false>(false)
 
@@ -30,8 +33,8 @@ export default function ComponentPreview({ title, Component, code , widthclass ,
 
 
   return <div className=''>
-    <div className='text-neutral-100 text-2xl '>{title}</div>
-    <div className='text-neutral-400 text-lg mt-1 '>{subheading}</div>
+    <div className={` ${titlecolor ?? "text-neutral-100"} text-2xl` }>{title}</div>
+    <div className={` ${subheadingcolor ?? "text-neutral-400"} text-lg mt-1` }>{subheading}</div>
 
     <div className='flex gap-4.5 text-lg mt-8 ml-1'>
       <div className={`cursor-pointer hover:text-neutral-100 transition-colors duration-200 ${isPreview ? "text-neutral-400" : " text-neutral-100"}`} onClick={() => {
@@ -42,7 +45,7 @@ export default function ComponentPreview({ title, Component, code , widthclass ,
       }}>Code</div>
     </div>
 
-    <div className={`border-2 border-neutral-800  min-h-[500px] max-h-[500px] rounded-lg  mt-1  overflow-scroll scrollbar-hide  ${widthclass ?? 'max-w-3xl'}`}>
+    <div className={` ${backgroundcolor ?? "bg-neutral-950"} border-2 border-neutral-800   shadow-lg min-h-[500px] max-h-[500px] rounded-lg  mt-1  overflow-scroll scrollbar-hide  ${widthclass ?? 'max-w-3xl'}`}>
 
       {!isPreview ? <div className='min-h-[500px]  w-full flex justify-center  '>
 

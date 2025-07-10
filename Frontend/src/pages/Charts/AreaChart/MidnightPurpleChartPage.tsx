@@ -109,7 +109,7 @@ export default function MidnightPurpleChartPage() {
           return<div>
           //Call the component , pass these props 
           //areatype - Determines the type of graph e.g - monotone , step , linear etc.
-            <MidnigntPurpleAreaChartComponent width={1000} height={420} areatype="monotone"/>
+            <MidnigntPurpleAreaChartComponent width={1000} height={420} areatype="linear"/>
             )}  widthclass="max-w-5xl"/>
 
           </div>
@@ -144,7 +144,7 @@ export default function MidnightPurpleChartPage() {
           return<div>
           //Call the component , pass these props 
           //areatype - Determines the type of graph e.g - monotone , step , linear etc.
-            <MidnigntPurpleAreaChartComponent width={1000} height={420} areatype="monotone"/>
+            <MidnigntPurpleAreaChartComponent width={1000} height={420} areatype="step"/>
             )}  widthclass="max-w-5xl"/>
 
           </div>
