@@ -13,7 +13,6 @@ import { useEffect, useRef } from "react";
 export default function MidnightPurpleChartPage() {
 
   const { chartId } = useParams()
-  const defaultRef = useRef<HTMLDivElement>(null)
   const monotoneRef = useRef<HTMLDivElement>(null);
   const linearRef = useRef<HTMLDivElement>(null);
   const stepRef = useRef<HTMLDivElement>(null);
