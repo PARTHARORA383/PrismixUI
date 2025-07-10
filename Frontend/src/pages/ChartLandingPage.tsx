@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom'
 import OrangeAreaChartSolid from '../components/Light/OrangeAreaChartSolid'
 import OrangeAreaChartStep from '../components/Light/OrangeAreaChartStep'
 
+import LightPeachStackedAreaChart from '../components/Dark/LightPeachStackedAreaChart'
+
 export default function ChartLandingPage() {
 
   const [theme, setTheme] = useState("dark"); // "light" or "dark"
@@ -137,6 +139,23 @@ export default function ChartLandingPage() {
               }}> view code</button>
             <DarkChartRenderComponent category='Area Chart - Step' title='Monthly Subscriptions Sold ' Component={<MidnigntPurpleAreaChartComponent width={450} height={200} areatype='step' />} />
           </div>
+
+          <div className='relative col-span-1 lg:col-span-2 border-2 border-neutral-800  transition-colors duration-200 cursor-default h-96 rounded-xl'>
+                <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/MidnightPurple/3')
+              }}> view code</button>
+            <DarkChartRenderComponent category='Area Chart - Stacked' title='Monthly Products Sold ' Component={<LightPeachStackedAreaChart height ={230} areatype = {"basis"}/>} />
+          </div>
+
+          <div className='relative col-span-1 border-2 border-neutral-800  transition-colors duration-200 cursor-default h-96 rounded-xl'>
+                <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/MidnightPurple/3')
+              }}> view code</button>
+            <DarkChartRenderComponent category='Area Chart - Stacked' title='Monthly Products Sold ' Component={<LightPeachStackedAreaChart height ={230} areatype = {"bump"}/>} />
+          </div>
+
         </>
         )
       }

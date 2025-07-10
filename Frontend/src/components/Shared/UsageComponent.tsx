@@ -23,7 +23,7 @@ export default function UsageComponent({code , widthclass}:props){
          
          <div className=' min-h-[500px] max-h-[500px] overflow-scroll scrollbar-hide'>
 
-      <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers customStyle={{ padding: 4, margin: 0, paddingTop: 8 }} >
+      <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers customStyle={{ padding: 4, margin: 0, paddingTop: 8}} >
         {code}
       </SyntaxHighlighter>
 
