@@ -7,6 +7,8 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
+import type { CurveType } from "recharts/types/shape/Curve";
+
 
 
 
@@ -18,9 +20,9 @@ type ChartDataItem = {
 
 
 export default function LightBrownAreaChartComponent({
-  height,
+  height, areatype
 }: {
-  height: number;
+  height: number , areatype : CurveType
 }) {
   const data = [
     { year: 2019, value: 120, label: "Initial Launch" },
@@ -87,7 +89,7 @@ export default function LightBrownAreaChartComponent({
 
           <Area
             dataKey="value"
-            type="monotone"
+            type={areatype}
             stroke="#805f31"
             fill="url(#browngradient)"
           />

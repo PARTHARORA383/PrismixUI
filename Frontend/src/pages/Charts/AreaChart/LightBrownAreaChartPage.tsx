@@ -46,7 +46,7 @@ export default function LightBrownAreaChartPage() {
 
     <div className="mt-8" ref = {monotoneRef}>
       <ComponentPreview title="LightBrown Area Chart - Monotone" Component={() => (
-        <LightBrownAreaChartComponent height={420} />
+        <LightBrownAreaChartComponent height={420}  areatype={'monotone'}/>
       )} code={codes.LightBrownArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this monotone area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
 
     </div>

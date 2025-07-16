@@ -12,6 +12,8 @@ import OrangeAreaChartStep from '../components/Light/OrangeAreaChartStep'
 import LightPeachStackedAreaChart from '../components/Dark/LightPeachStackedAreaChart'
 import LightBrownAreaChartComponent from '../components/Light/LightBrownAreaChart'
 
+import NeutralBarChart from '../components/Dark/Barcharts/NeutralBarChart'
+
 export default function ChartLandingPage() {
 
   const [theme, setTheme] = useState("dark"); // "light" or "dark"
@@ -179,27 +181,14 @@ export default function ChartLandingPage() {
       {theme == "dark" && chartType == 'bar' && (
         <>
 
-          <motion.div 
-          initial = {{opacity: 0 }}
-          animate = {{opacity : 1}}
-          transition={{duration : 0.2  , ease : "easeIn"}}
-          className='col-span-3 h-[300px]'>
-            <div className="w-full p-4 rounded-xl bg-neutral-800 flex flex-col items-center justify-center mt-8 ">
-              <div className="max-w-lg  text-center">
-                <p className="text-neutral-300 mb-6 text-xl" >
-                  Help us in our journey to make UI easy for everyone.{" "}
-                  <span className="text-neutral-100 font-medium "><br />Your feedback is valued at PrismixUI.</span>
-                </p>
-                <a
-                  href="mailto:partharora.works3@gmail.com?subject=Feedback%20for%20Prismix%20UI%20Library&body=Hi%20Parth,%0D%0A%0D%0AI%20would%20like%20to%20share%20my%20feedback%20for%20Prismix.%20Here%20are%20my%20thoughts:%0D%0A%0D%0A"
-                  className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold px-8 py-4 rounded-md transition"
-                >
-                  Send Feedback
-                </a>
-              </div>
-            </div>
+            <div className='relative col-span-1 border-2 border-neutral-800  transition-colors duration-200 cursor-default h-96 rounded-xl'>
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/MidnightPurple/3')
+              }}> View Code</button>
+            <DarkChartRenderComponent category='Bar Chart' title='Monthly Users Visited ' Component={<NeutralBarChart height={230} />} />
+          </div>
 
-          </motion.div>
 
         </>
       )}
@@ -273,6 +262,28 @@ export default function ChartLandingPage() {
 
           <div className=' relative col-span-1 border-2 border-neutral-200 transition-colors duration-200 cursor-default h-96 bg-neutral-100 rounded-xl overflow-hidden'>
 
+            <div className='text-neutral-950 text-lg ml-4 mb-8 mt-2'>Area Chart - Basis</div>
+            <div className='text-neutral-950 text-lg text-center font-medium'>Company Growth Journey (2019–2025)</div>
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-800 py-1 hover:bg-neutral-700 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/LightBrown/1')
+              }}> View Code</button>
+
+            <LightBrownAreaChartComponent height={250} areatype={'basis'}/>
+          </div>
+          <div className=' relative col-span-1 border-2 border-neutral-200 transition-colors duration-200 cursor-default h-96 bg-neutral-100 rounded-xl overflow-hidden'>
+
+            <div className='text-neutral-950 text-lg ml-4 mb-8 mt-2'>Area Chart - Linear</div>
+            <div className='text-neutral-950 text-lg text-center font-medium'>Company Growth Journey (2019–2025)</div>
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-800 py-1 hover:bg-neutral-700 transition-colors duration-200 cursor-pointer '
+              onClick={() => {
+                navigate('/components/charts/LightBrown/1')
+              }}> View Code</button>
+
+            <LightBrownAreaChartComponent height={250} areatype = {"linear"} />
+          </div>
+          <div className=' relative col-span-1 border-2 border-neutral-200 transition-colors duration-200 cursor-default h-96 bg-neutral-100 rounded-xl overflow-hidden'>
+
             <div className='text-neutral-950 text-lg ml-4 mb-8 mt-2'>Area Chart - Monotone</div>
             <div className='text-neutral-950 text-lg text-center font-medium'>Company Growth Journey (2019–2025)</div>
             <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-800 py-1 hover:bg-neutral-700 transition-colors duration-200 cursor-pointer '
@@ -280,7 +291,7 @@ export default function ChartLandingPage() {
                 navigate('/components/charts/LightBrown/1')
               }}> View Code</button>
 
-            <LightBrownAreaChartComponent height={250} />
+            <LightBrownAreaChartComponent height={250} areatype={'monotone'} />
           </div>
         </>
       )}
@@ -288,6 +299,8 @@ export default function ChartLandingPage() {
       {theme == "light" && chartType == 'bar' && (
         <>
 
+
+        
           
           <motion.div 
           initial = {{opacity: 0 }}
@@ -309,7 +322,7 @@ export default function ChartLandingPage() {
               </div>
             </div>
 
-          </motion.div>
+          </motion.div> 
 
 
 

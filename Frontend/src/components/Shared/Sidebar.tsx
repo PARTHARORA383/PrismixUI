@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Sidebar() {
   const navigate = useNavigate();
   const [isDarkAreaChart, setDarkIsAreaChart] = useState(false);
   const [isLightAreaChart, setLightIsAreaChart] = useState(false);
+  const [isDarkBarChart, setIsDarkBarChart] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const dropdownVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -10 },
+  };
 
   return (
     <div>
@@ -14,7 +21,7 @@ export default function Sidebar() {
       <div className="lg:hidden p-4 pt-20">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-neutral-200 focus:outline-none  absolute top-15 z-50"
+          className="text-neutral-200 focus:outline-none absolute top-15 z-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,120 +62,160 @@ export default function Sidebar() {
           DropDown
         </div>
 
+        {/* Dark AreaChart */}
         <div
           className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between"
-          onClick={() => {
-            setDarkIsAreaChart(!isDarkAreaChart);
-          }}
+          onClick={() => setDarkIsAreaChart(!isDarkAreaChart)}
         >
           AreaChart
           <motion.div
             animate={{ rotate: isDarkAreaChart ? 0 : 180 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="size-5"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <ChevronIcon />
           </motion.div>
         </div>
 
-        {isDarkAreaChart && (
+        <AnimatePresence>
+          {isDarkAreaChart && (
+            <motion.div
+              variants={dropdownVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="border-l-2 ml-8"
+            >
+              <SubLink
+                label="MidnightPurple"
+                onClick={() => {
+                  navigate("/components/charts/MidnightPurple");
+                  setIsOpen(false);
+                }}
+              />
+              <SubLink
+                label="LightPeach"
+                onClick={() => {
+                  navigate("/components/charts/LightPeach");
+                  setIsOpen(false);
+                }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Dark BarChart */}
+        <div
+          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between"
+          onClick={() => setIsDarkBarChart(!isDarkBarChart)}
+        >
+          BarChart
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="border-l-2 ml-8"
+            animate={{ rotate: isDarkBarChart ? 0 : 180 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div
-              className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 hover:translate-x-1.5"
-              onClick={() => {
-                navigate("/components/charts/MidnightPurple");
-                setIsOpen(false);
-              }}
-            >
-              MidnightPurple
-            </div>
-
-            <div
-              className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 hover:translate-x-1.5"
-              onClick={() => {
-                navigate("/components/charts/LightPeach");
-                setIsOpen(false);
-              }}
-            >
-              LightPeach
-            </div>
+            <ChevronIcon />
           </motion.div>
-        )}
+        </div>
 
+        <AnimatePresence>
+          {isDarkBarChart && (
+            <motion.div
+              variants={dropdownVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="border-l-2 ml-8"
+            >
+              <SubLink
+                label="Neutral"
+                onClick={() => {
+                  navigate("/components/charts/NeutralBarChart");
+                  setIsOpen(false);
+                }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Light Theme */}
         <div className="mt-4 py-1.5 px-4 cursor-pointer hover:bg-neutral-800 transition-colors duration-200 bg-neutral-900">
           Light Theme
         </div>
 
+        {/* Light AreaChart */}
         <div
           className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between"
-          onClick={() => {
-            setLightIsAreaChart(!isLightAreaChart);
-          }}
+          onClick={() => setLightIsAreaChart(!isLightAreaChart)}
         >
           AreaChart
           <motion.div
             animate={{ rotate: isLightAreaChart ? 0 : 180 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="size-5"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <ChevronIcon />
           </motion.div>
         </div>
 
-        {isLightAreaChart && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="border-l-2 ml-8"
-          >
-            <div
-              className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 hover:translate-x-1.5"
-              onClick={() => {
-                navigate("/components/charts/LightOrange");
-                setIsOpen(false);
-              }}
+        <AnimatePresence>
+          {isLightAreaChart && (
+            <motion.div
+              variants={dropdownVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="border-l-2 ml-8"
             >
-              LightOrange
-            </div>
-
-            <div
-              className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 hover:translate-x-1.5"
-              onClick={() => {
-                navigate("/components/charts/LightBrown");
-                setIsOpen(false);
-              }}
-            >
-              LightBrown
-            </div>
-          </motion.div>
-        )}
+              <SubLink
+                label="LightOrange"
+                onClick={() => {
+                  navigate("/components/charts/LightOrange");
+                  setIsOpen(false);
+                }}
+              />
+              <SubLink
+                label="LightBrown"
+                onClick={() => {
+                  navigate("/components/charts/LightBrown");
+                  setIsOpen(false);
+                }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
+    </div>
+  );
+}
+
+// Chevron Icon Component
+function ChevronIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="size-5"
+    >
+      <path
+        fillRule="evenodd"
+        d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+// SubLink Component
+function SubLink({ label, onClick } : any) {
+  return (
+    <div
+      className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 hover:translate-x-1.5"
+      onClick={onClick}
+    >
+      {label}
     </div>
   );
 }
