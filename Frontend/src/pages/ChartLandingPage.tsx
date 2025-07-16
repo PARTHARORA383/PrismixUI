@@ -64,14 +64,29 @@ export default function ChartLandingPage() {
         </motion.div>
 
         <motion.div
-          className="col-span-1 relative  h-76  w-full rounded-xl shadow-lg flex flex-col items-center justify-end bg-neutral-900 overflow-hidden  pl-8 "
+          className="col-span-1 relative  h-76  w-full rounded-xl shadow-lg flex flex-col items-center justify-end bg-neutral-900 overflow-hidden  "
         >
 
+                <motion.div 
+                initial = {{y:0, translateY : 60}}
+                animate = {{y:0 , translateY : 0}}
+                transition={{duration : 0.5, ease : "easeIn"}}
+                className='text-4xl font-bold absolute top-24 overflow-hidden left-4 '>
+                CREATE CHARTS
+                </motion.div>
 
           <div className='absolute top-1/2 left-0 bg-neutral-200 h-38 w-full overflow-hidden'>
-            <div className='rotate-180 -translate-y-20 '>
+          
+                <motion.div 
+                initial = {{y:0, translateY : -60}}
+                animate = {{y:0 , translateY : 0}}
+                transition={{duration : 1, ease : "easeIn"}}
+                className='text-4xl font-bold absolute pt-2  text-neutral-800 left-4 overflow-hidden'>
+                  ZERO % HASSLE
+                </motion.div>
 
-              <BarChartLightComponent width={400} height={200} />
+            <div className='rotate-180 -translate-y-20 '>
+         
             </div>
           </div>
 

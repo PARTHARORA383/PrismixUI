@@ -57,12 +57,12 @@ export default function OrangeChartLightPage() {
     <div className="mt-8" ref={monotoneRef}>
       <ComponentPreview title="LightOrange Area Chart - Basis" Component={() => (
         <OrangeAreaChartSolid width={1000} height={420} areatype="basis" />
-      )} code={codes.LightOrangeArea} widthclass="max-w-5xl" subheading="Integrate this light orange basis chart in your project with just one click" backgroundcolor="bg-neutral-100" />
+      )} code={codes.LightOrangeArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this light orange basis chart in your project with just one click" backgroundcolor="bg-neutral-100" />
 
     </div>
     <div className="mt-8 mb-8">
 
-      <InstallationComponent installation="npm i recharts" widthclass="max-w-5xl" />
+      <InstallationComponent installation="npm i recharts" widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
 
     <div className="">
@@ -76,11 +76,11 @@ export default function LightOrangeAreaChartRender(){
     //Call the component , pass these props 
     //areatype - Determines the type of graph e.g - monotone , step , linear etc.
     <OrangeAreaChartSolid width={1000} height={420} areatype="monotone" />
-      )} code={codes.LightOrangeArea} widthclass="max-w-5xl" subheading="Integrate this light orange grid background area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
+      )} code={codes.LightOrangeArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this light orange grid background area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
   </div>
 
 }
-`} widthclass="max-w-5xl" />
+`} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
 
 
@@ -92,12 +92,12 @@ export default function LightOrangeAreaChartRender(){
     <div className="" ref={basisRef}>
       <ComponentPreview title="LightOrange Area Chart - Background grid" Component={() => (
         <OrangeAreaChartBgGradient width={1000} height={420} areatype="monotone" />
-      )} code={codes.LightOrangeArea} widthclass="max-w-5xl" subheading="Integrate this light orange grid background area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
+      )} code={codes.LightOrangeArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this light orange grid background area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
 
     </div>
     <div className="mt-8 mb-8">
 
-      <InstallationComponent installation="npm i recharts" widthclass="max-w-5xl" />
+      <InstallationComponent installation="npm i recharts" widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
 
     <div className="">
@@ -111,11 +111,11 @@ export default function LightOrangeAreaChartRender(){
     //Call the component , pass these props 
     //areatype - Determines the type of graph e.g - monotone , step , linear etc.
     <OrangeAreaChartBgGradient width={1000} height={420} areatype="monotone" />
-      )} code={codes.LightOrangeArea} widthclass="max-w-5xl" subheading="Integrate this light orange grid background area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
+      )} code={codes.LightOrangeArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this light orange grid background area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
   </div>
 
 }
-`} widthclass="max-w-5xl" />
+`} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
 
 
@@ -126,12 +126,12 @@ export default function LightOrangeAreaChartRender(){
     <div className="" ref={stepRef}>
       <ComponentPreview title="LightOrange Area Chart - Step" Component={() => (
         <OrangeAreaChartStep width={1000} height={420} areatype="monotone" />
-      )} code={codes.LightOrangeArea} widthclass="max-w-5xl" subheading="Integrate this light orange step area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
+      )} code={codes.LightOrangeArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this light orange step area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
 
     </div>
     <div className="mt-8 mb-8">
 
-      <InstallationComponent installation="npm i recharts" widthclass="max-w-5xl" />
+      <InstallationComponent installation="npm i recharts" widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
 
     <div className="">
@@ -145,11 +145,11 @@ export default function LightOrangeAreaChartRender(){
     //Call the component , pass these props 
     //areatype - Determines the type of graph e.g - monotone , step , linear etc.
     <OrangeAreaChartStep width={1000} height={420} areatype="monotone" />
-      )} code={codes.LightOrangeArea} widthclass="max-w-5xl" subheading="Integrate this light orange grid background area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
+      )} code={codes.LightOrangeArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this light orange grid background area chart in your project with just one click" backgroundcolor="bg-neutral-100" />
   </div>
 
 }
-`} widthclass="max-w-5xl" />
+`} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
 
 

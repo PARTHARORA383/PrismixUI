@@ -46,12 +46,12 @@ export default function LightPeachStackedAreaChartPage() {
     <div className="mt-8" ref = {basisRef}>
       <ComponentPreview title="LightPeach Area Chart - Stacked Basis" Component={() => (
         <LightPeachStackedAreaChart height={420} areatype="basis" />
-      )} code={codes.LightPeachArea} widthclass="max-w-5xl" subheading="Integrate this stacked basis area chart in your project with just one click" />
+      )} code={codes.LightPeachArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this stacked basis area chart in your project with just one click" />
 
     </div>
     <div className="mt-8 mb-8">
 
-      <InstallationComponent installation="npm i recharts" widthclass="max-w-5xl"/>
+      <InstallationComponent installation="npm i recharts" widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md"/>
     </div>
 
     <div className="">
@@ -68,7 +68,7 @@ export default function LightPeachStackedChartRender(){
       <LightPeachStackedAreaChart height={420} areatype="basis" />
    </div>
      }
-`} widthclass="max-w-5xl" />
+`} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
     
     {
@@ -79,13 +79,13 @@ export default function LightPeachStackedChartRender(){
       <ComponentPreview title="
       LightPeach Area Chart - Stacked BumpX" Component={() => (
         <LightPeachStackedAreaChart height={420} areatype="bumpX" />
-      )} code={codes.LightOrangeArea} widthclass="max-w-5xl" subheading="Integrate this Linear area chart in your project with just one click" />
+      )} code={codes.LightOrangeArea} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this Linear area chart in your project with just one click" />
 
     </div>
 
     <div className="mt-8 mb-8">
 
-      <InstallationComponent installation="npm i recharts" widthclass="max-w-5xl" />
+      <InstallationComponent installation="npm i recharts" widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
     
     
@@ -103,7 +103,7 @@ export default function LightPeachStackedChartRender(){
       <LightPeachStackedAreaChart height={420} areatype="bumpX" />
    </div>
      }
-`} widthclass="max-w-5xl"/>
+`} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md"/>
     </div>
  
    

@@ -33,7 +33,7 @@ export default function ComponentPreview({ title, titlecolor , backgroundcolor ,
 
 
   return <div className=''>
-    <div className={` ${titlecolor ?? "text-neutral-100"} text-2xl` }>{title}</div>
+    <div className={` ${titlecolor ?? "text-neutral-100"} text-xl` }>{title}</div>
     <div className={` ${subheadingcolor ?? "text-neutral-400"} text-lg mt-1` }>{subheading}</div>
 
     <div className='flex gap-4.5 text-lg mt-8 ml-1'>

@@ -42,7 +42,7 @@ export default function MidnightPurpleChartPage() {
   return <div className="mb-8" >
 
 
-    <div className="text-2xl">Area Charts</div>
+    <div className="text-xl">Area Charts</div>
     <div className="text-lg text-neutral-400 mt-1">Designed to integrate seamlessly into your Prismix dashboards</div>
 
       {
@@ -52,12 +52,12 @@ export default function MidnightPurpleChartPage() {
     <div className="mt-8" ref = {monotoneRef}>
       <ComponentPreview title="MidnightPurple Area Chart - Monotone" Component={() => (
         <MidnigntPurpleAreaChartComponent width={1000} height={420} areatype="monotone" />
-      )} code={codes.MidnightPurpleChart} widthclass="max-w-5xl" subheading="Integrate this monotone area chart in your project with just one click" />
+      )} code={codes.MidnightPurpleChart} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this monotone area chart in your project with just one click" />
 
     </div>
     <div className="mt-8 mb-8">
 
-      <InstallationComponent installation="npm i recharts" widthclass="max-w-5xl"/>
+      <InstallationComponent installation="npm i recharts" widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md"/>
     </div>
 
     <div className="">
@@ -77,7 +77,7 @@ export default function MidnightPurpleChartPage() {
           </div>
 
           }
-`} widthclass="max-w-5xl" />
+`} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
     
     {
@@ -88,13 +88,13 @@ export default function MidnightPurpleChartPage() {
       <ComponentPreview title="
       MidnightPurple Area Chart - Linear" Component={() => (
         <MidnigntPurpleAreaChartComponent width={1000} height={420} areatype="linear" />
-      )} code={codes.MidnightPurpleChart} widthclass="max-w-5xl" subheading="Integrate this Linear area chart in your project with just one click" />
+      )} code={codes.MidnightPurpleChart} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this Linear area chart in your project with just one click" />
 
     </div>
 
     <div className="mt-8 mb-8">
 
-      <InstallationComponent installation="npm i recharts" widthclass="max-w-5xl" />
+      <InstallationComponent installation="npm i recharts" widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
     
     
@@ -115,7 +115,7 @@ export default function MidnightPurpleChartPage() {
           </div>
 
           }
-`} widthclass="max-w-5xl"/>
+`} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md"/>
     </div>
     {
       //Step
@@ -125,12 +125,12 @@ export default function MidnightPurpleChartPage() {
       <ComponentPreview title="
       MidnightPurple Area Chart - Step" Component={() => (
         <MidnigntPurpleAreaChartComponent width={1000} height={420} areatype="step" />
-      )} code={codes.MidnightPurpleChart} widthclass="max-w-5xl" subheading="Integrate this Step area chart in your project with just one click" />
+      )} code={codes.MidnightPurpleChart} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" subheading="Integrate this Step area chart in your project with just one click" />
 
     </div>
     <div className="mt-8 mb-8">
 
-      <InstallationComponent installation="npm i recharts" widthclass="max-w-5xl" />
+      <InstallationComponent installation="npm i recharts" widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
 
     <div className="">
@@ -150,7 +150,7 @@ export default function MidnightPurpleChartPage() {
           </div>
 
           }
-`} widthclass="max-w-5xl" />
+`} widthclass="lg:max-w-5xl md:max-w-xl sm:max-w-md 2xs : max-w-sm 2xs : max-w-md" />
     </div>
 
   </div>

@@ -6,7 +6,7 @@ const navigate = useNavigate()
 
   return <div>
 
-    <div className=" w-screen top-0 left-0 z-50 h-[56px] fixed bg-transparent backdrop-blur-md border-r border-neutral-800 border-b-2 " style={{}}>
+    <div className=" w-screen top-0 left-0 z-50 h-[56px] fixed bg-neutral-950 backdrop-blur-md border-r border-neutral-800 border-b-2 " style={{}}>
 
         <div className="flex items-center justify-start w-full h-full pl-8 gap-8">
 

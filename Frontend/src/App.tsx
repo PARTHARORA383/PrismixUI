@@ -16,7 +16,7 @@ function LayoutSidebar({children}:any){
     <div className="flex">
 
       <Sidebar/>
-      <div className="pl-96 pt-24 flex-1">{children}</div>
+      <div className="lg:pl-96 lg:pr-0 pr:8 pt-24 flex-1">{children}</div>
     </div>
   )
 
