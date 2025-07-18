@@ -14,15 +14,17 @@ const navigate = useNavigate()
 
         navigate('/')
       }}>
-      Prismix UI
+      <img src="/Images/logo-removebg.png" width={120}/>
       </div>
 
-      <div className="text-lg cursor-pointer"
+      <div className="cursor-pointer flex  gap-4 items-center justify-baseline"
       onClick={()=>{
         navigate('/charts')
-      }}>Charts</div>
+      }}> <span className=" font-medium text-[19px] text-neutral-100"> Charts   </span>
+ 
+      </div>
 
-      <div className="text-lg cursor-pointer"
+      <div className="font-medium text-[19px] cursor-pointer text-neutral-100"
       onClick={()=>{
         navigate('/components/dropdown')
       }}>Components</div>

@@ -166,9 +166,9 @@ export default function ChartLandingPage() {
             <DarkChartRenderComponent category='Area Chart - Stacked' title='Monthly Products Sold ' Component={<LightPeachStackedAreaChart height={230} areatype={"basis"} />} />
           </div>
 
-          <div className='relative col-span-1 border-2 border-neutral-800  transition-colors duration-200 cursor-default h-96 rounded-xl'>
-            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
-              onClick={() => {
+          <div className='relative col-span-1 border-2 border-neutral-800  transition-colors duration-200  cursor-default h-96 rounded-xl'>
+          <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
+            onClick={() => {
                 navigate('/components/charts/MidnightPurple/3')
               }}> View Code</button>
             <DarkChartRenderComponent category='Area Chart - Stacked' title='Monthly Products Sold ' Component={<LightPeachStackedAreaChart height={230} areatype={"bump"} />} />
@@ -181,10 +181,12 @@ export default function ChartLandingPage() {
       {theme == "dark" && chartType == 'bar' && (
         <>
 
-            <div className='relative col-span-1 border-2 border-neutral-800  transition-colors duration-200 cursor-default h-96 rounded-xl'>
+            <div className='relative col-span-1 border-2 border-neutral-800  transition-colors 
+            duration-200 cursor-default h-96 rounded-xl'>
+
             <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
               onClick={() => {
-                navigate('/components/charts/MidnightPurple/3')
+                navigate('/components/charts/NeutralBarChart')
               }}> View Code</button>
             <DarkChartRenderComponent category='Bar Chart' title='Monthly Users Visited ' Component={<NeutralBarChart height={230} />} />
           </div>
