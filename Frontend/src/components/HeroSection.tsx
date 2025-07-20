@@ -217,31 +217,31 @@ export default function HeroSection() {
            </svg>
         </div> */}
 
-      <div className="w-full mt-12">
-        <div className="text-neutral-400 text-xl">
+      <div className="w-full mt-8 lg:mt-12">
+        <div className="text-neutral-400 text-lg lg:text-xl">
           Designed for devs who call it efficient, not lazy
           </div>
 
-          <div className="flex items-center justify-center mt-4 gap-8">
-            <div className=" flex items-center justify-center gap-4 text-3xl">
+          <div className="flex items-center justify-center ml-4 mr-4 mt-4 gap-8">
+            <div className=" flex items-center justify-center gap-2 lg:gap-4text-2xl lg:text-3xl">
               <SiTypescript/>
-            <span className="lg:text-xl">Typescript</span>
+            <span className="text-sm lg:text-xl">Typescript</span>
             </div>
-            <div className=" flex items-center justify-center gap-4 text-xl lg:text-3xl">
+            <div className=" flex items-center justify-center gap-2 lg:gap-4text-xl lg:text-3xl">
               <SiReact/>
-            <span className="lg:text-xl">React</span>
+            <span className="text-sm lg:text-xl">React</span>
             </div>
-            <div className=" flex items-center justify-center gap-4 text-xl lg:text-3xl">
+            <div className=" flex items-center justify-center gap-2 lg:gap-4text-xl lg:text-3xl">
               <SiNextdotjs/>
-            <span className="lg:text-xl">Next.js</span>
+            <span className="text-sm lg:text-xl">Next.js</span>
             </div>
-            <div className=" flex items-center justify-center gap-4 text-xl lg:text-3xl">
+            <div className=" flex items-center justify-center gap-2 lg:gap-4text-xl lg:text-3xl">
               <SiTailwindcss/>
-            <span className="lg:text-xl">Tailwind CSS</span>
+            <span className="text-sm lg:text-xl">Tailwind CSS</span>
             </div>
-            <div className=" flex items-center justify-center gap-4 text-xl lg:text-3xl">
+            <div className=" flex items-center justify-center gap-2 lg:gap-4text-xl lg:text-3xl">
               <SiFramer/>
-            <span className="lg:text-xl">Framer Motion</span>
+            <span className="text-sm lg:text-xl">Framer Motion</span>
             </div>
             </div> 
 

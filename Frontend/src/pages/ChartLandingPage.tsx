@@ -13,6 +13,10 @@ import LightPeachStackedAreaChart from '../components/Dark/LightPeachStackedArea
 import LightBrownAreaChartComponent from '../components/Light/LightBrownAreaChart'
 
 import NeutralBarChart from '../components/Dark/Barcharts/NeutralBarChart'
+import OrangeBarChart from '../components/Dark/Barcharts/OrangeBarChart'
+import SimpleBarChart from '../components/Dark/Barcharts/SimpleBarChart'
+import StackedBarChart from '../components/Dark/Barcharts/StackedBarChart'
+import BackgroundBarChart from '../components/Dark/Barcharts/BackgroundBarChart'
 
 export default function ChartLandingPage() {
 
@@ -182,13 +186,50 @@ export default function ChartLandingPage() {
         <>
 
             <div className='relative col-span-1 border-2 border-neutral-800  transition-colors 
-            duration-200 cursor-default h-96 rounded-xl'>
+            duration-200 cursor-default h-96 rounded-xl shadow-lg'>
 
             <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer '
               onClick={() => {
                 navigate('/components/charts/NeutralBarChart')
               }}> View Code</button>
-            <DarkChartRenderComponent category='Bar Chart' title='Monthly Users Visited ' Component={<NeutralBarChart height={230} />} />
+            <DarkChartRenderComponent category='Bar Chart - Tiny' title='Monthly Users Visited ' Component={<NeutralBarChart height={230} />} />
+          </div>
+            <div className='relative col-span-1 border-2 border-neutral-800  transition-colors 
+            duration-200 cursor-default h-96 rounded-xl shadow-lg'>
+
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer  '
+              onClick={() => {
+                navigate('/components/charts/NeutralBarChart')
+              }}> View Code</button>
+            <DarkChartRenderComponent category='Bar Chart - Tiny' title='Monthly Users Visited ' Component={<OrangeBarChart height={230} />} />
+          </div>
+
+            <div className='relative col-span-1 border-2 border-neutral-800  transition-colors 
+            duration-200 cursor-default h-96 rounded-xl shadow-lg'>
+
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer  '
+              onClick={() => {
+                navigate('/components/charts/NeutralBarChart')
+              }}> View Code</button>
+            <DarkChartRenderComponent category='Bar Chart - Tiny' title='Monthly Users Visited ' Component={<BackgroundBarChart height={230} />} />
+          </div>
+          
+            <div className='relative col-span-1 lg:col-span-2 border-2 border-neutral-800  transition-colors 
+            duration-200 cursor-default h-96 rounded-xl shadow-lg'>
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer  '
+              onClick={() => {
+                navigate('/components/charts/NeutralBarChart')
+              }}> View Code</button>
+            <DarkChartRenderComponent category='Bar Chart - Simple' title='Monthly Revenue Generated ' Component={<SimpleBarChart height={230} />} />
+          </div>
+
+            <div className='relative col-span-1 border-2 border-neutral-800  transition-colors 
+            duration-200 cursor-default h-96 rounded-xl shadow-lg'>
+            <button className=' z-50 rounded-md flex items-center justify-center mt-2 absolute top-0 right-4 px-4 bg-neutral-950 py-1 border-2 border-neutral-800 hover:border-neutral-500 transition-colors duration-200 cursor-pointer  '
+              onClick={() => {
+                navigate('/components/charts/NeutralBarChart')
+              }}> View Code</button>
+            <DarkChartRenderComponent category='Bar Chart - Stacked' title='Monthly Revenue Generated ' Component={<StackedBarChart height={230} />} />
           </div>
 
 
@@ -300,9 +341,6 @@ export default function ChartLandingPage() {
 
       {theme == "light" && chartType == 'bar' && (
         <>
-
-
-        
           
           <motion.div 
           initial = {{opacity: 0 }}

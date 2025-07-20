@@ -50,7 +50,7 @@ export default function NeutralBarChart({height} : {height : number}) {
                   y={y}
                   width={width}
                   height={height}
-                  fill={isHover ? "#3b82f6" : "#262626"} // blue on hover
+                  fill={isHover ? "#3b82f6" : "#262626"} 
                   rx={10}
                   ry={10}
                   onMouseEnter={() => setHoveredIndex(index)}
