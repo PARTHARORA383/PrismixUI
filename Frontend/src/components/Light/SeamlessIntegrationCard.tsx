@@ -1,11 +1,10 @@
-import { useState } from "react";
+
 import { SiNextdotjs, SiReact } from "react-icons/si";
 import {motion} from "motion/react"
 
 export default function SeamlessIntegrationCard (){
 
 
-  const [isHover , setIsHover] = useState(false);
 
 
  
