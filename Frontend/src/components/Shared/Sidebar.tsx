@@ -53,7 +53,7 @@ export default function Sidebar() {
         </div>
 
         <div
-          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 hover:translate-x-1.5"
+          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 hover:translate-x-1.5 text-[15px] font-medium"
           onClick={() => {
             navigate("/components/dropdown");
             setIsOpen(false);
@@ -64,7 +64,7 @@ export default function Sidebar() {
 
         {/* Dark AreaChart */}
         <div
-          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between"
+          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between text-[15px] font-medium"
           onClick={() => setDarkIsAreaChart(!isDarkAreaChart)}
         >
           AreaChart
@@ -84,7 +84,7 @@ export default function Sidebar() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.2, ease: "easeInOut" }}
-              className="border-l-2 ml-8"
+              className="border-l-2 ml-8 text-[15px] font-medium"
             >
               <SubLink
                 label="MidnightPurple"
@@ -106,7 +106,7 @@ export default function Sidebar() {
 
         {/* Dark BarChart */}
         <div
-          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between"
+          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between text-[15px] font-medium"
           onClick={() => setIsDarkBarChart(!isDarkBarChart)}
         >
           BarChart
@@ -126,7 +126,7 @@ export default function Sidebar() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.2, ease: "easeInOut" }}
-              className="border-l-2 ml-8"
+              className="border-l-2 ml-8 text-[15px] font-medium "
             >
               <SubLink
                 label="Neutral"
@@ -146,7 +146,7 @@ export default function Sidebar() {
 
         {/* Light AreaChart */}
         <div
-          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between"
+          className="mt-4 px-4 text-neutral-400 cursor-pointer hover:text-neutral-100 transition-all duration-200 flex gap-2 justify-between text-[15px] font-medium"
           onClick={() => setLightIsAreaChart(!isLightAreaChart)}
         >
           AreaChart
@@ -166,7 +166,7 @@ export default function Sidebar() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.2, ease: "easeInOut" }}
-              className="border-l-2 ml-8"
+              className="border-l-2 ml-8 text-[15px] font-medium "
             >
               <SubLink
                 label="LightOrange"

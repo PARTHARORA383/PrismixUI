@@ -50,7 +50,7 @@ export default function HeroSection() {
         else {
           clearInterval(interval)
           currentIndex = 0
-          DeleteIndex = text1.length - 1
+          DeleteIndex = text1.length - 1  
           setTimeout(() => {
             setPhase('Typing')
           }, 200)
@@ -65,7 +65,7 @@ export default function HeroSection() {
 
 
   return (
-    <div>
+    <div className="relative">
       <div className=" text-3xl lg:text-7xl mt-30 lg:mt-36 font-medium bg-gradient-to-tr from-neutral-100 to-neutral-400 text-transparent bg-clip-text">
         Build Beautiful Websites
       </div>
@@ -107,7 +107,7 @@ export default function HeroSection() {
       </div>
       
 
-       <div className=" w-screen  fixed   -translate-x-14">
+       <div className=" w-screen  absolute -translate-x-14">
           <svg className="w-full h-24" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
 
                 <defs>
@@ -145,7 +145,7 @@ export default function HeroSection() {
        </div>
       
 
-       <div className=" w-screen  fixed top-40 ">
+       <div className=" w-screen  absolute top-40 ">
           <svg className=" w-full h-24" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
 
                 <defs>
@@ -162,7 +162,7 @@ export default function HeroSection() {
       <motion.path
       d="M900,90 L1000,0 L1200,1 L1400,10"
         fill="none"
-        stroke="#f59e0b" // Tailwind amber-500 hex
+        stroke="#f59e0b" 
         strokeWidth="2"
         vectorEffect="non-scaling-stroke"
         strokeLinecap="round"
